@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chúc Em 20/10 Ngọt Ngào 💖</title>
+    <title>Em💖</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Imperial+Script&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
@@ -66,12 +66,12 @@
         </h2>
 
         <div class="relative">
-          <button
+          <!-- <button
             id="prevBtn"
             class="absolute left-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white rounded-full p-3 shadow hover:scale-110 transition"
           >
             ❮
-          </button>
+          </button> -->
 
           <div
             id="slideContainer"
@@ -88,7 +88,7 @@
                   "snap-center shrink-0 hover-zoom w-72 h-52 rounded-2xl overflow-hidden shadow-lg bg-white transition-transform duration-300";
 
                 div.innerHTML = `
-      <img src="/img/em/anh${i}.jpg" class="w-full h-full object-cover" />
+      <img src="img/em/anh${i}.jpg" class="w-full h-full object-cover" />
     `;
 
                 slideContainer.appendChild(div);
@@ -96,12 +96,12 @@
             </script>
           </div>
 
-          <button
+          <!-- <button
             id="nextBtn"
             class="absolute right-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white rounded-full p-3 shadow hover:scale-110 transition"
           >
             ❯
-          </button>
+          </button> -->
         </div>
       </section>
 
@@ -300,7 +300,7 @@
           // danh sách ảnh (có thể tự động hoặc cố định)
           const images = Array.from(
             { length: 12 },
-            (_, i) => `/img/locket/${i + 1}.jpg`
+            (_, i) => `img/locket/${i + 1}.jpg`
           );
 
           // render for
@@ -334,6 +334,6 @@
         🔊
       </button>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
