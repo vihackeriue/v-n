@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chúc Em 20/10 Ngọt Ngào 💖</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Imperial+Script&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <style></style>
+  </head>
+
+  <body class="font-inner text-gray-800 overflow-x-hidden">
+    <!-- 🔒 MÀN NHẬP PASSWORD -->
+    <div
+      id="passwordScreen"
+      class="fixed inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-teal-100 to-teal-700 z-50"
+    >
+      <div
+        class="bg-white/80 backdrop-blur-md shadow-2xl rounded-3xl p-8 text-center max-w-sm mx-auto"
+      >
+        <h2 class="text-3xl font-bold text-gray-700 mb-4">
+          Xin chào, xin chào
+        </h2>
+        <p class="text-gray-600 mb-4">Có phải người yêu của tui không?</p>
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="Nhập mật khẩu..."
+          class="border border-teal-300 rounded-xl w-full px-4 py-2 focus:outline-none focus:ring-1 focus:ring-teal-500 mb-4"
+        />
+        <button
+          id="unlockBtn"
+          class="bg-teal-500 text-white px-6 py-2 rounded-xl shadow hover:scale-105 transition"
+        >
+          Mở khóa
+        </button>
+        <p id="errorMsg" class="text-red-500 mt-3 hidden">
+          Khai mau, khai mau. Vào đây tìm cái gì? 😢
+        </p>
+      </div>
+    </div>
+
+    <div id="mainContent">
+      <!-- 🌹 Header -->
+      <header class="text-center py-10">
+        <h1
+          class="text-6xl md:text-5xl font-bold text-pink-700 animate-pulse imperial-script-regular"
+        >
+          Embe Nguỵt oii 💐
+        </h1>
+        <p class="text-gray-600 mt-3 text-lg">12/04/2025 💖</p>
+        <p id="dayCount" class="text-gray-600 mt-3 text-lg"></p>
+      </header>
+
+      <!-- 🌷 SLIDE HÌNH ẢNH -->
+      <section
+        id="gallery"
+        class="relative my-16 max-w-5xl mx-auto px-6 fade-in"
+      >
+        <h2 class="text-3xl font-semibold text-center text-pink-700 mb-6">
+          📸 Embe iuu
+        </h2>
+
+        <div class="relative">
+          <button
+            id="prevBtn"
+            class="absolute left-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white rounded-full p-3 shadow hover:scale-110 transition"
+          >
+            ❮
+          </button>
+
+          <div
+            id="slideContainer"
+            class="slide-container flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4"
+          >
+            <script>
+              // Giả sử bạn có 7 ảnh: /img/anh1.jpg → /img/anh7.jpg
+              const totalImages = 8;
+              const slideContainer = document.getElementById("slideContainer");
+
+              for (let i = 1; i <= totalImages; i++) {
+                const div = document.createElement("div");
+                div.className =
+                  "snap-center shrink-0 hover-zoom w-72 h-52 rounded-2xl overflow-hidden shadow-lg bg-white transition-transform duration-300";
+
+                div.innerHTML = `
+      <img src="/img/em/anh${i}.jpg" class="w-full h-full object-cover" />
+    `;
+
+                slideContainer.appendChild(div);
+              }
+            </script>
+          </div>
+
+          <button
+            id="nextBtn"
+            class="absolute right-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white rounded-full p-3 shadow hover:scale-110 transition"
+          >
+            ❯
+          </button>
+        </div>
+      </section>
+
+      <!-- 🌸 Lời chúc -->
+      <section id="wishes" class="max-w-3xl mx-auto px-6 space-y-8">
+        <h2
+          class="text-6xl text-center font-semibold text-pink-700 fade-in imperial-script-regular"
+        >
+          Yêu bằng tai
+        </h2>
+        <div class="space-y-3">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>Lời đầu tiên anh luôn muốn nói là "anh iuuu embe nhiều lắm.</p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Chúc em càng ngày càng xinh hơn. Tất nhiên trong mắt anh, bé
+                luôn xinh đẹp và đặc biệt.
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Dù đã có mâu thuẫn, chúng ta đã lựa chọn ở lại với nhau và yêu
+                nhau nhiều hơn. Cảm ơn em.
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>Mỗi ngày mở mắt ra, người đầu tiên anh nghĩ đến luôn là em.</p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>Gặp được em đã là 1 điều dịu dàng với anh.</p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>Yêu - chỉ mong ngày mai vẫn là em.</p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                "Anh sẽ luôn ở đây với em, nhưng hãy nói cho anh biết rằng bất
+                cứ lúc nào em cảm thây không ổn."
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Anh ở đây - Không phải để phán xét, mà cùng em vượt qua những
+                điều khiến em không vui.
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                "Một người yêu chưa chắc đã hợp nhau. Nhưng người có cố gắng để
+                hợp với nhau, chắc chắn rất yêu". Anh cảm nhận được. Cảm ơn em
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Em lựa chọn cảm xúc của anh hơn là những việc ngoài kia. Em chưa
+                làm được nhưng anh vui vì em sẽ làm không phải vì anh bảo mà vì
+                yêu anh.
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Anh vui - Em thoải mái, nghiêm túc, sẳn sàng về nhà anh và gặp
+                ba mẹ anh...
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Em Vui - Em thấy em anh thực sự nghiêm túc, nói chuyện với ba mẹ
+                em, không ngại cho gia đình biết...
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Anh muốn 2 chúng ta cùng nhau trải nghiệm, cùng kỷ niệm và cùng
+                1 khung hình.
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>
+                Anh muốn trong những khoảng khắc quan trọng của chúng ta đều có
+                nhau ở bên cạnh
+              </p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>Cùng nhau viết tiếp tình yêu này nhá!</p>
+              <div class="absolute -top-2 -left-5 text-3xl">🌸</div>
+            </div>
+            <div
+              class="fade-in border border-gray-200 bg-gray-100 rounded-2xl p-3 relative flex-1"
+            >
+              <p>Chặn cuối cùng - Bên cạnh anh vẫn là em, được không?</p>
+              <div class="absolute -top-2 -left-5 text-3xl">💖</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="memories" class="max-w-5xl mx-auto px-6 my-16 fade-in">
+        <h2
+          class="text-6xl text-center font-semibold text-pink-700 mb-8 imperial-script-regular"
+        >
+          🎬 Thước phim anh yêu
+        </h2>
+        <div id="videoGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <script>
+            const totalVideos = 5;
+            const videoGrid = document.getElementById("videoGrid");
+
+            for (let i = 1; i <= totalVideos; i++) {
+              const div = document.createElement("div");
+              div.className =
+                "hover-zoom rounded-2xl overflow-hidden shadow-lg bg-white";
+
+              div.innerHTML = `
+      <video controls class="w-full h-56 object-cover rounded-2xl">
+        <source src="video/${i}.MP4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+    `;
+
+              videoGrid.appendChild(div);
+            }
+          </script>
+        </div>
+      </section>
+      <section id="memories" class="max-w-5xl mx-auto px-6 my-16 fade-in">
+        <h2
+          class="text-6xl text-center font-semibold text-pink-700 mb-8 imperial-script-regular"
+        >
+          🎬 Locket
+        </h2>
+        <div id="locket" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <script>
+          const galleryGrid = document.getElementById("locket");
+
+          // danh sách ảnh (có thể tự động hoặc cố định)
+          const images = Array.from(
+            { length: 12 },
+            (_, i) => `/img/locket/${i + 1}.jpg`
+          );
+
+          // render for
+          galleryGrid.innerHTML = images
+            .map(
+              (src) => `
+      <div class="hover-zoom rounded-2xl overflow-hidden shadow-lg bg-white fade-in">
+        <img src="${src}" class="w-full h-56 object-cover" />
+      </div>
+    `
+            )
+            .join("");
+        </script>
+      </section>
+      <!-- 🌼 Footer -->
+      <footer
+        class="text-center py-6 text-gray-600 text-5xl font-semibold imperial-script-regular text-pink-700 mb-10"
+      >
+        Hãy yêu và yêu em nhé!
+      </footer>
+
+      <!-- 🎶 Nhạc nền + Nút bật/tắt -->
+      <audio id="bgMusic" loop autoplay>
+        <source src="audio/vanvatnhumuontabennhau.mp3" type="audio/mpeg" />
+      </audio>
+
+      <button
+        id="musicToggle"
+        class="fixed bottom-6 right-6 bg-teal-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition"
+      >
+        🔊
+      </button>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
