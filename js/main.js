@@ -11,13 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(petal);
   }
 });
-// Tính số ngày yêu nhau
+// Tính số ngày và giờ yêu nhau
 const startDate = new Date("2025-04-12");
-const today = new Date();
-const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+const now = new Date();
+
+// Tổng mili-giây đã trôi qua
+const diffMs = now - startDate;
+
+// Số mili-giây trong 1 ngày và 1 giờ
+const msPerDay = 1000 * 60 * 60 * 24;
+const msPerHour = 1000 * 60 * 60;
+
+// Tính số ngày và giờ
+const diffDays = Math.floor(diffMs / msPerDay);
+const diffHours = Math.floor((diffMs % msPerDay) / msPerHour);
+
 document.getElementById(
   "dayCount"
-).innerText = `Hôm nay là ngày thứ ${diffDays} bên nhau 💖`;
+).innerText = `Hôm nay là ngày thứ ${diffDays} 💖 ${diffHours} giờ bên nhau 💕`;
 // Password logic
 const passwordScreen = document.getElementById("passwordScreen");
 const mainContent = document.getElementById("mainContent");
